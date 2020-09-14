@@ -1,0 +1,147 @@
+
+h2{
+	position: absolute;
+	font-size: 8pt;
+	visibility: hidden;
+}
+div{
+	height: 150px;
+	width: 300px;
+}
+div:hover h2{ 
+	background-color: black;
+	color: white;
+	visibility: visible;
+} 
+.container{
+	display: flex;
+	width: 930px;
+	padding: 10px;
+}
+
+.container-france{
+	margin-left: 10px;
+	border: 1px solid black;
+    background: linear-gradient(to right, blue 0, blue 33.333%, white 33.333%, white 66.666%, red 66.666%, red 100%);
+}
+
+.german-container{
+	margin-left: 10px;
+	border: 1px solid black;
+	background: linear-gradient(to bottom, black 0, black 33.333%, #DD0000 33.333%, #DD0000 66.666%, #FFCE00 66.666%, #FFCE00 100%);
+}
+
+.mad-container{
+	margin-left: 10px;
+	border: 1px solid black;
+}
+
+.mad-white{
+	float: left;
+	height: 100%;
+	width: 33%;
+	background-color: white;
+}
+
+.mad-red-green{
+	background: linear-gradient(to bottom, #FC3D32 50%, #007E3A 50%);
+}
+
+.swiss-container{
+	margin-left :10px;
+	width: 150px;
+	border: 0.5px solid black;
+	display: flex;
+	padding-right: 150px;
+}
+.swiss-1{
+	width: 20%;
+	background: #ff0000;
+}
+.swiss-2{	
+	width: 20%;
+	background: linear-gradient(to bottom, #ff0000 0, #ff0000 40%, white 40%, white 60%, #ff0000 60%, #ff0000 100%);
+}
+.swiss-3{	
+	width: 20%;
+	background: linear-gradient(to bottom, #ff0000 0, #ff0000 20%, white 20%, white 80%, #ff0000 80%, #ff0000 100%);
+}
+
+.sweed-container{
+	margin-left: 10px;
+	border: 0.5px solid black;
+	display: flex;
+
+}
+.sweed-1{
+	width: 31.25%;
+	background: linear-gradient(to bottom, #006aa8 0, #006aa8 40%, #fecd00  40%, #fecd00 60%, #006aa8 60%, #006aa8 100%);
+	
+}
+.sweed-2{	
+	width: 12.5%;
+	background: #fecd00;
+}
+.sweed-3{	
+	width: 56.25%;
+	background: linear-gradient(to bottom, #006aa8 0, #006aa8 40%, #fecd00  40%, #fecd00 60%, #006aa8 60%, #006aa8 100%);
+}
+
+.container-gambia{
+	margin-left: 10px;
+	border: 0.5px solid black;
+	background: linear-gradient(to bottom, #CE1126 0, #CE1126 30%, white  30%, white 40%, #0C1C8C 40%, #0C1C8C 60%,
+		white 60%, white 70%, #3A7728 70%, #3A7728 100%);
+}
+
+.japan-container{
+	margin-left: 10px;
+	border: 0.5px solid black;
+}
+
+.japan-circle{
+	background: -webkit-linear-gradient(left top, #BC002D, #BC002D 100%);
+	width: 75px;
+	height: 75px;
+	border-radius: 100%;
+	position:relative;
+    top:33px;
+    left:112px;
+}
+
+.niger-container{
+	margin-left: 10px;
+	border: 0.5px solid black;
+	background: linear-gradient(to bottom, #E05206 0, #E05206 33.333%, #FFFFFF 33.333%, #FFFFFF 66.666%, #0DB02B 66.666%, #0DB02B 100%);
+}
+
+.n-1{
+	background: -webkit-linear-gradient(left top, #E05206, #E05206 100%);
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	position:relative;
+    top:55px;
+    left:140px;
+}
+
+.greece-container{
+	margin-left: 10px;
+	border: 0.5px solid black;
+	display: flex;
+}
+.g-1{
+	width: 14.81%;
+	background: linear-gradient(to bottom, #0D5EAF 0, #0D5EAF 22.22%, white 22.22%, white 33.33%, #0D5EAF 33.33%, 
+		#0D5EAF 55.55%, white 55.55%, white 66.66%, #0D5EAF 66.66%, #0D5EAF 77.77%, white 77.77%, white 88.88%, #0D5EAF 88.88%, #0D5EAF 100%);
+}
+.g-2{
+	width: 7.47%;
+	background: linear-gradient(to bottom, white 0, white 66.66%, #0D5EAF 66.66%, #0D5EAF 77.77%, white 77.77%, white 88.88%, #0D5EAF 88.88%, #0D5EAF 100%); 
+}
+.g-3{
+	width: 62.96%;
+	background: linear-gradient(to bottom, #0D5EAF 0, #0D5EAF 11.11%, white 11.11%, white 22.22%, #0D5EAF 22.22%, #0D5EAF 33.33%, white 33.33%, white 44.44%, 
+		#0D5EAF 44.44%, #0D5EAF 55.55%, white 55.55%, white 66.66%, #0D5EAF 66.66%, #0D5EAF 77.77%, white 77.77%, white 88.88%, #0D5EAF 88.88%, #0D5EAF 100%);
+
+}

@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;   
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-image: url(images/sky.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110vw 200vh;
+}
+
+/* nav items */
+a{
+    text-decoration: none;
+}
+
+ul {
+    list-style-type : none;
+    margin : 0;
+    padding : 0;
+ }
+.logo img{
+    height: 60px;
+    margin-right: 50px;
+}
+.navbar { 
+    display: flex;
+    align-items: center;
+}
+nav{
+    width: 100%;
+    background-color: white;
+    padding-left: 30px; 
+}
+.nav-list {
+    display: flex;
+}
+.nav-list li{ 
+    padding: 25px 25px;
+}
+.nav-list li:hover{ 
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+/* main body content */
+.main-content{
+    display: flex;
+    justify-content: center; 
+    padding: 50px;
+    width: 100%;
+}
+.container-text{
+    height: 400px;
+    width: 500px;
+    float: left;
+    padding: 20px;
+    margin-right: 50px;
+    background-color: #f1f1f1;
+}
+
+.learn-more{
+    background-color: #939393;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.map-container{
+    margin-left: 50px;
+    height: 400px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+.footer-container{
+    display:flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white; 
+    font-size: small;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .nav-list li{
+        padding:10px;
+    }
+    .main-content{
+        display: block;
+    }
+    .map-container, .container-text {
+        width: 100%;    
+        margin: 20px 0px;
+    }
+}
