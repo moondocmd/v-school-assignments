@@ -9,11 +9,44 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="about-us.css">
     </head>
     <body>
-        <h3>We are professional!</h3>
-        <a href="index.html">Back Home</a>
-        <script src="" async defer></script>
+        <header>
+            <nav class ="navbar">
+                <a href="index.html" class="logo">
+                    <img src="/images/mm.jpg">
+                </a>            
+                <ul class="nav-list">
+                    <li class = "nav-item">
+                        <a href = "index.html">Home</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a href = "about-us.html">About Us</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a href = "about-us.html">Services</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a href = "about-us.html">Customer Stories</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h3>Try our color generator below!</h3>
+        <div id="grid-container">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+            <div id="box4"></div>
+            <div id="box5"></div>
+            <div id="box6"></div>
+        </div>
+        <div class = "button-container">
+            <button class="learn-more" onclick="reloadColors();">Load New Colors</button>      
+            <button class="learn-more"><a href="index.html">Back Home</a></button>        
+        </div>
+        <script src="scripts.js" async defer></script>
     </body>
 </html>
