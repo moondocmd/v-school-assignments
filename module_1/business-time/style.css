@@ -112,6 +112,9 @@ footer{
         margin: -15px; 
         text-align: center;
     }
+    h1{
+        font-size: large;
+    }
     nav{
         padding:0;
     }
