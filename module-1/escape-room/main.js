@@ -8,12 +8,10 @@ while(!handInHole){
     if(response == 2){
         hasKey = true;
         console.log("\nYou've got the key, go ahead and open the door in the next round\n");
-    }
-    else if((response == 3) && hasKey){
+    } else if((response == 3) && hasKey){
         console.log("\nYOU WIN!\n");
         break;
-    }
-    else{
+    } else {
         console.log("\nGame Over\n");
         handInHole = true;
     }
