@@ -9,7 +9,6 @@ function changeBackgroundColor(className, color){
     }
 }
 
-
 /* QUALIFIER */
 
 //Create Header elements and data
@@ -34,7 +33,7 @@ var dialog = [
     "You're nuts, obviously it's the Browns!  No Question!",
     "The Browns?!?",
     "You're right... maybe we're both nuts"
-]
+];
 
 for (let i = 0; i < messages.length; i++) {
     messages[i].textContent = dialog[i];
@@ -54,26 +53,33 @@ document.getElementById("clear-button").addEventListener(
 var themeDropDown = document.getElementById("theme-drop-down");
 
 //TODO ADD MORE OPTIONS
-themeDropDown.addEventListener(
-    "change", function(){
+themeDropDown.addEventListener("change", function(){
         console.log("DETECTED A CHANGE " + themeDropDown.value);
-        if (themeDropDown.value = "theme-two"){
+        if (themeDropDown.value === "theme-two"){
             changeBackgroundColor('left', 'red');
             changeBackgroundColor('right', 'black');
-        } else if (themeDropDown.value = "theme-one") { //check this
+        } else if (themeDropDown.value === "theme-one") { 
             console.log("THEME ONE");
             changeBackgroundColor('left', 'burlywood');
             changeBackgroundColor('right', 'lightblue');
         }
 });
 
-/* GOLD */
+/* GOLD & Extra Credit */
 
-let items = document.querySelectorAll(".left");
+// get messages parent element
+var main = document.getElementById("main").childNodes[3];
 
-// var newDiv = document.createElement("div");
-// newDiv.append(" Message Test");
+var form = document.getElementsByName("message")[0];
 
-// document.getElementsByClassName('messages').appendChild(newDiv);
+form.addEventListener("submit", function(e){
+    // stop page from refreshing on submit
+    e.preventDefault();
+    const newDiv = document.createElement("div");
 
-// document.getElementById("main").append(newDiv);
+    newDiv.append(document.getElementById("input").value);
+    if (main.children.length % 2 === 0) newDiv.className = "message left";
+    else newDiv.className = "message right";
+
+    main.append(newDiv);
+});
