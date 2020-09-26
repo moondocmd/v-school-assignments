@@ -1,0 +1,75 @@
+ul{
+    padding-inline-start: 0;
+}
+.title {
+    text-align: center;
+}
+
+.title-bar{
+    background-color: lightgray;
+}
+
+.main {
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+}
+
+#add-item {
+    border: 1px solid black;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button{
+    /* display:inline-block; */
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    color:white;
+    background-color:grey;
+    text-align:center;
+}
+
+.label {
+    margin: 10px;
+}
+
+#add-todo{
+    margin: 0 auto;
+    width:300px;
+    padding:20px;
+    text-align: center;
+}
+
+#list {
+    flex-direction: column;
+    display: flex;
+}
+
+#list > li{
+    list-style-type: none;
+    margin: 10px auto;
+}
+
+#list div {
+    font-size: 25px;
+    background-color: lightgrey;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* added to make sure list is never empty */
+.no-show{
+    display: none;
+}
