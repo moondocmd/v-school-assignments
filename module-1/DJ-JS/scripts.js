@@ -38,4 +38,4 @@ document.addEventListener("keydown", function(event) {
         //console.log(colorTable[parseInt(event.which)]);
         divColorChange(colorTable[parseInt(event.which)]);
     }
-})
+});
