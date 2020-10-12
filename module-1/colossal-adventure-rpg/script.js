@@ -35,7 +35,7 @@ function playGame(){
             console.log(`Hey ${name}, here's your current inventory: ${inventory}`);
         }
     }
-    console.log(`Thank you for playing, you made it to level ${level}, and you finished with the following inventory: ${inventory}`);
+    console.log(`\nThank you for playing, you made it to level ${level}, and you finished with the following inventory: ${inventory}`);
 }
 
 function fight(health){
