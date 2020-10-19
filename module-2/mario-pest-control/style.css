@@ -1,0 +1,57 @@
+
+header{
+    padding: 10px;
+    text-align: center;
+    background: darkgray;
+    color: white;
+    font-size: 20px;
+    width: 89%;
+    border: 1px solid black;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.container div {
+    width: 33%;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.container img{
+    width: 65%;
+}
+
+#submit{
+    margin: 0 auto;
+    padding: 10px;   
+}
+
+#totals{
+    padding: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;  
+}
+
+#totals *{
+    margin: 10px;
+}
+
+footer {
+    margin-top: 80px;
+    text-align: center;
+    padding: 3px;
+    background-color: lightgray;
+    color: darkslategray;
+}
+
+footer p{
+    display: inline;
+    margin: 15px;
+}

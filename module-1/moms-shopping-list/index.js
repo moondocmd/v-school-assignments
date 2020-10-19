@@ -42,7 +42,7 @@ const editButtons = document.getElementsByClassName("edit");
 for (let button of editButtons) addEditEvent(button);
 
 document.querySelector("form").onsubmit = (e) => {
-        e.preventDefault();
-        createItem(document.getElementById("title").value);
-        document.getElementById("title").value = "";
+    e.preventDefault();
+    createItem(document.getElementById("title").value);
+    document.getElementById("title").value = "";
 };

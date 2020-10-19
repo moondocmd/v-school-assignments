@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container">
+            <form name="travelForm">
+                First Name: <input type="text" name="fname" />
+                Last Name: <input type="text" name="lname"/><br />
+                Age: <input type="number" name="age"/><br/>
+                Gender: <br />
+                Male<input type="radio" name="gender" value="Male"/>
+                Female<input type="radio" name="gender" value="Female"/>
+                <br/>
+                <label for="destination">Choose a destination:</label>
+                <select name="destination" id="destination">
+                    <option value="turin">Turin</option>
+                    <option value="milan">Milan</option>
+                    <option value="venice">Venice</option>
+                    <option value="florence">Florence</option>
+                    <option value="bologna">Bologna</option>
+                    <option value="modena">Modena</option>
+                    <option value="bari">Bari</option>
+                </select><br/>
+                <label for="dietary">Any dietary restrictions?:</label><br/>
+                <input type="checkbox" id="vegetarian" name="dietary" value="vegetarian">
+                <label for="vehicle1">Vegetarian</label><br>
+                <input type="checkbox" id="kosher" name="dietary" value="kosher">
+                <label for="vehicle2">Kosher</label><br>
+                <input type="checkbox" id="lactose" name="dietary" value="lactose">
+                <label for="vehicle3">Lactose Free</label><br><br>
+                <br><br>
+                <input type="submit" value="Submit">
+
+
+            </form>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

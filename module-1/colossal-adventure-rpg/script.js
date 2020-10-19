@@ -24,7 +24,7 @@ function playGame(){
     while (health > 0){
         level ++;
         console.log(`Current level: ${level}`);
-        let wildEnemy = Math.floor(Math.random(10) * 10);
+        let wildEnemy = Math.floor(Math.random() * 10);
         if (wildEnemy < 8){ // about a 2/3 chance
             console.log("You did not encounter any enemies on this level");
         } else {
@@ -45,7 +45,7 @@ function fight(health){
     let move = readlineSync.question('What do you want to do next? (a)ttack or any other key to run: ');
     if (move === "a" && enemyWillSurvive){
         console.log("Sorry mate, they thrashed you...");
-        health -= Math.floor(Math.random(10) * 20); // player lost
+        health -= Math.floor(Math.random() * 20); // player lost
     } else if (move === "a"){
         console.log("Nice job, you killed the enemy!");
         health += 10;
@@ -55,7 +55,7 @@ function fight(health){
     }
     console.log(`after this fight you have ${health}% health`);
     console.log(`Oh no ${enemy} just whacked you on your way out!`);
-    return health - Math.floor(Math.random(10) * 10); // take a little extra health off for that whack
+    return health - Math.floor(Math.random() * 10); // take a little extra health off for that whack
 }
 
 console.log("Hello brave soul, welcome to the toughest game on the Internet!!");

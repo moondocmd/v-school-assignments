@@ -1,0 +1,17 @@
+body{
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+div{
+   height: 60px;
+   padding: 5px;
+}
+div *{
+    padding:5px;
+    margin: 5px;   
+}
+h1{ font-size: medium; }
+#add{ background-color: aquamarine; }
+#subtract{ background-color: lightgray; }
+#multiply{ background-color: lightcyan; }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>Mario Pest Control</h1>
+        </header>      
+        <div class="container">
+            <div id="goomba">
+                <h3>Goombas</h3>
+                <p>5 coins</p>
+                <img src='img/goomba.jpeg' /><br>
+                <input type="number" id="goombaTotal" placeholder="# caught">
+            </div>
+            <div id="bob-ombs">
+                <h3>Bob-ombs</h3>
+                <p>7 coins</p>
+                <img src='img/bob-ombs.jpeg' /><br>
+                <input type="number" id="bobTotal" placeholder="# caught">
+            </div>
+            <div id="cheep">
+                <h3>Cheep-cheeps</h3>
+                <p>11 coins</p>
+                <img src='img/cheep.jpeg' /><br>
+                <input type="number" id="cheepTotal" placeholder="# caught">
+            </div> 
+            <input type="submit" id="submit" value="Submit"><br>
+        </div>
+        <div id="totals">
+            <label id="totalL">Total Price:  </label><br>
+            <input type="text" id="total" name="total" readonly><br>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    <footer>
+        <p>555 Main St. San Francisco, CA 95211 </p>
+        <p>www.mario.com </p>
+        <p><a href="mailto:mario@example.com">mario@example.com</a></p>
+    </footer>
+</html>
