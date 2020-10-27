@@ -93,11 +93,11 @@ var voters = [
 function voterResults(arr) {
     return arr.reduce(function (final, voter) {
         if (voter.age < 26) 
-            voter.voted ? (final.numYoungVotes++, final.numYoungPeople++) : final.numYoungPeople++
+            voter.voted ? (final.numYoungVotes++, final.numYoungPeople++) : final.numYoungPeople++;
         else if (voter.age > 35) // Is this really Old?!?! 
-            voter.voted ? (final.numOldVotes++, final.numOldPeople++) : final.numOldPeople++
+            voter.voted ? (final.numOldVotes++, final.numOldPeople++) : final.numOldPeople++;
         else 
-            voter.voted ? (final.numMidVotes++, final.numMidPeople++) : final.numMidPeople++
+            voter.voted ? (final.numMidVotes++, final.numMidPeople++) : final.numMidPeople++;
         return final;
         }, {numYoungVotes : 0,
             numYoungPeople: 0,

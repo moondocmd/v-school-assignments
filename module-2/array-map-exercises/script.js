@@ -61,8 +61,8 @@ function namesOnly(arr){
 // 5) Make an array of strings of the names saying whether or not they can go to The Matrix
 function makeStrings(arr){
     return arr.map(function(person){
-        if (person.age > 17) return person.name + " can go to the matrix"
-        else return person.name + " is under age!!"
+        if (person.age > 17) return `${person.name} can go to the matrix`
+        else return `${person.name} is under age!!`
     })    
 }
   
@@ -92,7 +92,7 @@ function makeStrings(arr){
 // 6) Make an array of the names in h1s, and the ages in h2s
 function readyToPutInTheDOM(arr){
     return arr.map(function(person){
-        return "<h1>" + person.name + "</h1><h2>" + person.age + "</h2>"
+        return `<h1>${person.name}</h1><h2>${person.age}</h2>`
     })      
 }
   console.log(readyToPutInTheDOM([

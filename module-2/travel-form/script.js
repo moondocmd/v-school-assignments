@@ -2,16 +2,15 @@
 const form = document.travelForm
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const checkedInputs = []
+    const checkedInputs = [];
     
     for(let i = 0; i < form.dietary.length; i++){
         if(form.dietary[i].checked){
-            checkedInputs.push(form.dietary[i].value)
+            checkedInputs.push(form.dietary[i].value);
         }
     }
-    // console.log(checkedInputs);
     alert(
         "First Name: " + form.fname.value + "\n" +
         "Last Name: " + form.lname.value + "\n" +

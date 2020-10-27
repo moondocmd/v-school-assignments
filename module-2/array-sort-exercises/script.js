@@ -27,7 +27,6 @@ function alphabetical(arr) {
 console.log(alphabetical(["dog", "wolf", "by", "family", "eaten"])); // ["by", "dog", "eaten", "family", "wolf"] 
 // 5) Sort the objects in the array by age
 function byAge(arr){
-    // return arr.sort((a, b) => b.age < a.age);
     return arr.sort((a, b) => (a.age > b.age) ? 1 : -1)
 }
 
