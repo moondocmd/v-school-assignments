@@ -21,7 +21,8 @@ console.log(stringConcat([1,2,3])); // "123"
 // 3) Turn an array of voter objects into a count of how many people voted
 function totalVotes(arr) {
     return arr.reduce(function (final, voter) {
-        return voter.voted ? final += 1 : final
+        return voter.voted ? final ++ : final
+        // return voter.voted && final++;
         }, 0)
 }
 

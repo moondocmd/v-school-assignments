@@ -1,0 +1,75 @@
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-90px);
+      transform: translateY(-90px);
+    }
+  
+    80% {
+      -webkit-transform: translateY(-70px);
+      transform: translateY(-70px);
+    }
+  }
+
+body{
+    background-color: darkgray;
+}
+
+#container{
+    margin: 25px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+}
+
+#container *{
+    height: 200px;
+    border: 1px solid black;
+    background-color: black;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    border: solid 5px white;
+
+}
+
+#sq1:hover{
+    transition-duration: 3s;
+    background-color: red;
+}
+
+#sq2:hover{
+    background-color: aquamarine;
+    border-radius: 50%;
+}
+
+#sq3:hover{
+    opacity: 0.4;
+    background-color: darksalmon;
+    border-radius: 15%;
+}
+
+#sq4:hover{
+    border-width: 30px; 
+    width:175px;
+    background-color: white;
+}
+
+#sq5:hover{
+    color: #ff7a59;
+    border: yellow 1px;
+    background:#fff;
+    border: solid 5px white;
+    border-width: 9px;
+}
+
+#sq6:hover {
+    background-color: dodgerblue;
+    border: solid 5px white;
+    animation: bounce 2s;
+  }
