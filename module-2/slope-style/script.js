@@ -33,7 +33,8 @@ const vacation = {
   duration: "2 weeks"
 };
 
-function parseSentence({location=vacation.location, duration=vacation.duration} = {}){
+// function parseSentence({location=vacation.location, duration=vacation.duration} = {}){
+function parseSentence({location, duration} = vacation){
     return `We're going to have a good time in ${location} for ${duration}`
 }
 

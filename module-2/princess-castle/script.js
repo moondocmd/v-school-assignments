@@ -1,11 +1,11 @@
 
 class Player {
-    constructor(name, totalCoins, status, hasStar, gameActive=true){
-        this.name = name;
+    constructor(totalCoins, status, hasStar, gameActive=true, name=''){
         this.totalCoins = totalCoins;
         this.status = status;
         this.hasStar = hasStar;
         this.gameActive = gameActive;
+        this.name = name;
     }
 
     setName(namePicked){
@@ -14,7 +14,6 @@ class Player {
     }
 
     gotHit(){
-        // console.log(`Getting Hit, Current Status: ${this.status}`);
         if (this.hasStar){
             console.log("Your Star protected You!");
             this.hasStar = false;
@@ -45,16 +44,16 @@ class Player {
 
 }
 
-let player = new Player("Mario", 0, "Big", false);
+let player = new Player(0, "Big", false);
 player.setName("Luigi");
 
 let timer = setInterval( () => {
     player.print();
     let randomEvent = Math.floor((Math.random() * 3));
-    // console.log(`\nRandom Event: ${randomEvent}`)
+    console.log(`\nRandom Event: ${randomEvent}`)
     if (randomEvent === 0){
         player.gotHit();
     } else if (randomEvent === 1){
         player.gotPowerUp();
     } else player.addCoin();
-}, 750); 
+}, 1000); 

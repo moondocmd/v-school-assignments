@@ -1,0 +1,84 @@
+{
+    "menu": {
+        "appetizers": [
+            {
+                "name":"Breadstick",
+                 "ingredients": ["bread","pepper"],
+                 "description": "Classic goodie"
+            },
+            {
+                "name":"Pickle",
+                 "ingredients": ["vinegar","cucumber"],
+                 "description": "its a pickle"
+            },
+            {
+                "name":"Chips",
+                 "ingredients": ["Salt","Potato"],
+                 "description": "Plain potato chips"
+            }
+        ],
+        "cold-sandwiches": [
+            {
+                "name":"Italian",
+                 "ingredients": ["Salami","Bread", "Cheese"],
+                 "description": "Classic Italian"
+            },
+            {
+                "name": "Turkey & Swiss",
+                 "ingredients": ["Turkey","Swiss"],
+                 "description": "Sandwich"
+            },
+            {
+                "name":"PB-J",
+                 "ingredients": ["Peanut","Butter", "Jelly"],
+                 "description": "It's so good"
+            }
+        ],
+        "hot-sandwiches": [
+            {
+                "name":"Philly Cheese",
+                 "ingredients": ["Cheese","Meat", "Bread"],
+                 "description": "Philly Style"
+            },
+            {
+                "name":"Hoagie",
+                 "ingredients": ["Meat","Veggies", "Bread", "Cheese"],
+                 "description": "Hot and Delicious"
+            }
+        ],
+        "desserts": [
+            {
+                "name":"Ice-Cream",
+                 "ingredients": ["Cream","Milk"],
+                 "description": "We got Vanilla"
+            },
+            {
+                "name":"Snickers",
+                 "ingredients": ["Chocolate","Butter", "Wrapper"],
+                 "description": "It costs $5"
+            },
+            {
+                "name":"Canoli",
+                 "ingredients": ["Cream","Flour"],
+                 "description": "Its so good, from Italy"
+            }
+        ],
+        "drinks": [
+            {
+                "name":"Beer",
+                 "ingredients": ["Wheat","Hops"],
+                 "description": "32oz Mug"
+            },
+            {
+                "name":"Wine",
+                 "ingredients": ["Grapes","Water"],
+                 "description": "Red or White"
+            },
+            {
+                "name":"Water",
+                 "ingredients": ["Hydrogen","Oxygen"],
+                 "description": "From the tap"
+            }
+        ]
+    }
+}
