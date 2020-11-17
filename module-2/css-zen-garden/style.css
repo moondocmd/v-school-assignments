@@ -2,6 +2,16 @@ body{
     margin:0;
     background-color: #EBF3ED;
     padding: 5px;
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+h3{
+    margin: 2em 0 0 0;
+    color: #2e484c;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.8em;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 .container {
@@ -20,33 +30,56 @@ body{
         "footer footer footer"
         "footer2 footer2 footer2";
 }
-.container > div {
-    border: solid lightblue 1px;
-}
 
 .logo{
+    background: #2d6360 60% 0 url(img/huntington.jpg) no-repeat;
     grid-area: logo;
+    height: 170px;
+    color: white;
+    text-align: center;
+    
 }
 
 .logo-side{
     grid-area: logo-side;
+    background: #2d6360 1% 0 url(img/huntington.jpg) no-repeat;
+    color: white;
+    text-align: center;
+    font-size: 12pt;
+    padding: 30px;
+}
+
+.logo-side h2{
+    opacity: .7;    
+    padding: 10px;
+    border: 1px solid white;
 }
 
 .content{
     grid-area: content;
+    padding: 0 35px 0 35px;
+
 }
 
 .content1{
     grid-area: content1;
+    padding: 0 35px 0 35px;
+
 }
 
 .content2{
     grid-area: content2;
+    background-color: rgba(138,188,159,0.5);
+    padding: 0 35px 0 35px;
+
+    
 }
 
 .content3{
     grid-area: content3;
     width: 66.666%;
+    border-right: 1px solid white;
+    
 }
 
 .authors {
@@ -56,11 +89,30 @@ body{
 .links {
     background-color: lightpink;
     grid-area: links;
+    background-color: rgba(82, 146, 110, 0.5);
+    opacity: .75;
+    
 }
+
+.list-links{
+    list-style-type: none;
+    padding-left: 50px;
+}
+
+
+.list-links li{
+    padding-top: 15px;
+}
+
 
 .footer {
     grid-area: footer;
-    background-color: aquamarine;
+    height: 170px;
+    background: #2d6360 1% 0 url(img/huntington.jpg) no-repeat;
+    font-size: 16pt;
+    padding-top: 50px;
+    text-align: center;
+    color: white;
 }
 
 .footer2{
@@ -85,6 +137,21 @@ body{
         "links";
     }
     .content3{width: 100%;}
+    
+    .logo-side{
+        grid-area: logo-side;
+        background: #2d6360 1% 0 url(img/huntington.jpg) no-repeat;
+        color: white;
+        text-align: center;
+        font-size: 10pt;
+        padding: 10px;
+    }
+    
+    .logo-side h2{
+        opacity: .7;    
+        padding: 10px;
+        border: 0px solid white;
+    }
 }
 
 /* FLEX */
