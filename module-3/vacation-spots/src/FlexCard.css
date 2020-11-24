@@ -1,0 +1,59 @@
+
+/* https://www.atyantik.com/creating-card-layout-with-css3-grid/ */
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+body{
+    padding: 10px;
+    background-color: gray;
+}
+
+body a{
+    background-color: rgb(189, 197, 216);
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10pt;
+}
+.card {
+    border: 1px solid #d3d3d3;
+    border-radius: .25rem;
+  }
+
+  .grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+
+  /* .bg-img {
+    background-size: cover;
+    min-height: 180px;
+    background-position: center;
+    background-color: #ccc;
+  } */
+  
+  .content {
+    height: 250px;
+    /* padding: 15px; */
+    font-size: 6pt;
+    color: white;
+  }
+
+  .price{
+    font-size: 10pt;
+    color: white;
+      
+  }
+  
+  /* button {
+    background-color: transparent;
+    border: 1px solid #2196F3;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: .25rem;
+  } */
