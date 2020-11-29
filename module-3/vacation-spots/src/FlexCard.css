@@ -9,6 +9,12 @@ h2{
 body{
     padding: 10px;
     background-color: gray;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body a{
@@ -25,21 +31,12 @@ body a{
 
   .grid-container {
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
   }
-
-  /* .bg-img {
-    background-size: cover;
-    min-height: 180px;
-    background-position: center;
-    background-color: #ccc;
-  } */
   
   .content {
     height: 250px;
-    /* padding: 15px; */
     font-size: 6pt;
     color: white;
   }
@@ -49,11 +46,3 @@ body a{
     color: white;
       
   }
-  
-  /* button {
-    background-color: transparent;
-    border: 1px solid #2196F3;
-    padding: .5rem 1rem;
-    cursor: pointer;
-    border-radius: .25rem;
-  } */

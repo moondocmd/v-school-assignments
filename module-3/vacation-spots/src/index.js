@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import './FlexCard.css';
-// import App from './App';
 import VacationSpot from './VacationSpot'
-
 
 const App = () => {
   return (

@@ -2,9 +2,7 @@ import React from 'react';
 import faker from 'faker';
 
 const CommentDetail = props => {
-    // let names = ['Mike', 'Joey', 'Jessie', 'Kate', 'Matt', 'Andrea'];
-    // let name = names[Math.floor(Math.random() * names.length)];
-    console.log(props)
+    // console.log(props)
     return (
         <div className="comment">
             <a href="/" className="avatar">
