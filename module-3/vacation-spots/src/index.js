@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './FlexCard.css';
-import VacationSpot from './VacationSpot'
+import VacationSpot from './VacationSpot';
+
 
 const App = () => {
   return (
