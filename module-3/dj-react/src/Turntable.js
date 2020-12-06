@@ -30,9 +30,9 @@ class Turntable extends React.Component {
     }
 
     partyDJ(){
-        let items = [...this.state.squares];
-        items[0] = items[1] = 'purple';
-        this.setState({ squares: items });
+        // let items = [...this.state.squares];
+        // items[0] = items[1] = 'purple';
+        this.setState({ squares: [ 'purple', 'purple', this.state.squares[2], this.state.squares[3]] });
     }
 
     proDJ(){
