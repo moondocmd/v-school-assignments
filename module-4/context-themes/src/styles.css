@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    margin: 10px;
+}
+
+.dark-theme {
+    background-color:red;
+    color: whitesmoke;
+}
+
+.light-theme {
+    background-color: lightcoral;
+    color: #333333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+li {
+    display: inline;
+    width: 60px;
+    padding: 10px;
+}

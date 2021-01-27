@@ -84,6 +84,7 @@ class Form extends React.Component {
                         name="fName" 
                         placeholder="First Name"
                         pattern=".{3,}"
+                        value={this.state.fName}
                         onChange={this.handleChange} 
                     />
                     <input 

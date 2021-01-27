@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    margin: 10px;
+}
+
+.dark-theme {
+    background-color:red;
+    color: whitesmoke;
+}
+
+.light-theme {
+    background-color: lightcoral;
+    color: #333333;
+}
+
+.container {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.ugly-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding-bottom: 50px; 
+}
+
+.ui.card {
+    margin-top: 0;
+}
+
