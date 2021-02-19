@@ -14,7 +14,7 @@ Using React Router, the app will have 3 views:
     - Note: List will not be saved when the user ends the session
 
 ## User Stories
-**As an investor**
+**As an investor,**
 1. I would like the ability to search a particular stock and receive relevant information that will help me make an investment decision.
 2. I want to be able to quickly view a concise list of the most active stocks from the trading day
 3. I want to be able to build out a list of stocks to watch, and be able to consolidated information on each in one table-style view.
@@ -26,4 +26,3 @@ Using React Router, the app will have 3 views:
 
 ## Mind Map
 1. https://atlas.mindmup.com/2021/02/07a11ec070c511ebab51b9d6d1bc56fb/index_js/index.html
-
