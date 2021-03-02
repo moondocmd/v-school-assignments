@@ -11,7 +11,7 @@ function HotStocks() {
         try {
             axios.get(`https://financialmodelingprep.com/api/v3/stock/actives?apikey=df22a09cda3752489e8f8ab7ca16f7f2`).then(response => {
                 const stocks = response.data;
-                console.log(stocks.mostActiveStock);
+                console.log("Stocks", stocks.mostActiveStock);
                 setStocks(stocks.mostActiveStock);
             })
         } catch (error) {
@@ -21,7 +21,7 @@ function HotStocks() {
 
     return (
         <div>
-            <table class="ui compact table">
+            <table className="ui unstackable table">
                 <thead>
                     <tr>
                         <th>Symbol</th>
@@ -33,7 +33,7 @@ function HotStocks() {
                 </thead>
 
                 {hotStocks.map((stock, idx) =>
-                    <tbody>
+                    <tbody key={idx}>
                         <td key={idx}>{stock.ticker}</td>
                         <td>{stock.price}</td>
                         <td>{stock.changes}</td>

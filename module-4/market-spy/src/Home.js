@@ -75,7 +75,7 @@ function Home() {
                 </p> :
                     <div>
                         <h3>You searched for: {currentStock['01. symbol']}</h3>
-                        <table class="ui large table">
+                        <table className="ui large table">
                             <tbody>
                                 <tr>
                                     <td>Stock Price:</td><td> {Number(currentStock['05. price']).toLocaleString('en-EN', { style: 'currency', currency: 'USD' })}</td>
