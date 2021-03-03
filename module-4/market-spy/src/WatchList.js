@@ -46,21 +46,33 @@ function WatchList() {
         //     // console.log("New Stocks1= ", copyStocks)
         // }
 
-        stocks.forEach(stock => {
+        stocks.forEach( (stock, idx) => {
             console.log("Checking = ", stock)
             const sym = stock['01. symbol'];
             axios.get(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${sym}&apikey=M90JRSDK1T2INSLW`).then(response => {
                 const res = response.data['Global Quote'];
-                console.log("RESULT = ", res)
-                stock['05. price'] = res['03. high'];
-                stock['09. change'] = res['09. change'];
-                stock['10. change percent'] = res['10. change percent'];
-                stock['06. volume'] = res['06. volume'];
+                console.log("RESULT = ", res);
+                // need to update current item only
+
+                setStocks((prevState) => ([
+                    ...prevState, 
+                    {
+                        id: prevState[idx].id,
+                        ['01. symbol']: res['01. symbol'],
+                        ['05. price']: res['05. price'],
+                        ['09. change']: res['09. change'],
+                        ['10. change percent']: res['10. change percent'],
+                        ['06. volume']: res['06. volume']
+                    }
+                ]))
+                // stock['05. price'] = res['03. high'];
+                // stock['09. change'] = res['09. change'];
+                // stock['10. change percent'] = res['10. change percent'];
+                // stock['06. volume'] = res['06. volume'];
             });
         })
-
         // console.log("Copying refreshed stocks ", copyStocks)
-        // checkStocks();
+        checkStocks();
         // setStocks(prevState => [...prevState] );
         // setStocks(copyStocks)
     }
