@@ -7,16 +7,11 @@ function HotStocks() {
     const [hotStocks, setStocks] = useState([]);
 
     useEffect(() => {
-        // Update the document title using the browser API
         try {
             axios.get(`https://financialmodelingprep.com/api/v3/stock/actives?apikey=df22a09cda3752489e8f8ab7ca16f7f2`).then(response => {
-                const stocks = response.data;
-                console.log("Stocks", stocks.mostActiveStock);
-                setStocks(stocks.mostActiveStock);
+                setStocks(response.data.mostActiveStock);
             })
-        } catch (error) {
-            console.log(error)
-        }
+        } catch (error) { console.log(error) }
     }, []);
 
     return (

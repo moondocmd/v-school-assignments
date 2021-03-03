@@ -1,16 +1,8 @@
-body{
-    margin: 0;
-}
+body{ margin: 0; }
 
 header{
-    /* padding: 60px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-    font-size: 30px; */
-    overflow: hidden;
+  overflow: hidden;
   background-color: #333;
-  
 }
 
 header *{
@@ -34,16 +26,25 @@ header *.active {
 
 .title{
   position: absolute;
-  right: 100px;
-  width: 300px;
+  color:yellow;
+  right: 10%;
+  width: 200px;
   padding: 10px;
 }
 
 .container {
-
     width: 60%; 
     margin: 0 auto;
     padding-bottom: 50px;
+}
+
+.watch-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.ui.form.error *{
+  margin: 2px;
 }
 
 .search {
@@ -62,4 +63,8 @@ header *.active {
   font-size: x-small;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+  .title { display: none; }  
 }

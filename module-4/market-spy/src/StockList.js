@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const StockList = ({ stocks, removeStock }) => {
-
-    console.log("STOCKS = ", stocks)
 
     return (
         <div>
@@ -24,7 +22,9 @@ const StockList = ({ stocks, removeStock }) => {
                         <td>{stock['09. change']}</td>
                         <td>{stock['10. change percent']}</td>
                         <td>{Number(stock['06. volume']).toLocaleString('en')}</td>
+                        <div onClick={() => removeStock(stock.id)} className="ui submit button">Delete</div>
                     </tbody>
+
                 )}
             </table>
         </div >
