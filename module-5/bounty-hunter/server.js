@@ -1,12 +1,14 @@
 
 const express = require ("express");
 const app = express();
-const { v4: uuid } = require('uuid')
+const { v4: uuid } = require('uuid');
+const morgan = require('morgan');
 
 app.use(express.json());
+app.use(morgan('dev'));
 
 app.listen(9000, () => {
-    console.log("The server is running on port 9000");
+    console.log("The server is running on port 9000!");
 })
 
 const bounties = [
@@ -17,7 +19,12 @@ const bounties = [
     { fName: "James", lName: "Capi", living: true, bounty: 4563456, Type: "Jedi",  _id: uuid()}
 ];
 
+app.get("/",(req,res)=>{
+    res.send(bounties)
+})
+
 app.get("/bounties", (req, res) => {
+    // console.log("GETTING BOUNTIES")
     res.send(bounties);
 })
 
