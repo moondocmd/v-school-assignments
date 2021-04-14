@@ -1,19 +1,11 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios'
-import Bounties from "./components/Bounties.js"
+import React from 'react'
+import Form from "./components/Form"
 
 function App() {
-    const [bounties, setBounties] = useState([]);
-
-    useEffect(() => {
-        axios.get("/bounties")
-        .then(res => setBounties(res.data))
-        .catch(err => console.log(err))
-    }, [])
-
     return (
-        <div>
-            { bounties.map(bounty => <h1>{bounty.fName}</h1>)}
+        <div className="container">
+            <Form />
+            <h1>Hello World</h1>
         </div>
     )
 }
