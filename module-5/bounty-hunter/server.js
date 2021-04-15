@@ -20,7 +20,7 @@ const bounties = [
         living: true, 
         imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", 
         bounty: 1000000, 
-        Type: "Jedi",  
+        type: "Jedi",  
         _id: uuid() },
     { 
         fName: "Sally", 
@@ -28,7 +28,7 @@ const bounties = [
         living: false, 
         imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         bounty: 1, 
-        Type: "Sith",  
+        type: "Sith",  
         _id: uuid() },
     { 
         fName: "Mark", 
@@ -36,7 +36,7 @@ const bounties = [
         living: true, 
         imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         bounty: 1000000, 
-        Type: "Jedi" , 
+        type: "Jedi" , 
         _id: uuid() },
     { 
         fName: "Jenna", 
@@ -44,7 +44,7 @@ const bounties = [
         living: false, 
         imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         bounty: 1234, 
-        Type: "Sith",  
+        type: "Sith",  
         _id: uuid() },
     { 
         fName: "James", 
@@ -52,29 +52,39 @@ const bounties = [
         living: true, 
         imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         bounty: 4563456, 
-        Type: "Jedi",  
+        type: "Jedi",  
         _id: uuid()}
 ];
 
 app.get("/",(req,res)=>{
-    res.send(bounties)
-})
+    res.send(bounties);
+});
 
 app.get("/bounties", (req, res) => {
     // console.log("GETTING BOUNTIES")
     res.send(bounties);
-})
+});
 
 app.post("/bounties", (req, res) => {
     const newBounty = req.body;
     newBounty._id = uuid();
     bounties.push(newBounty);
     res.send(newBounty);
-})
+});
 
 app.delete('/:bountyId', (req, res) => {
+    console.log("LOOKING AT: ", req.params.bountyId);
     const deleteId = req.params.bountyId;
     const deleteIndex = bounties.findIndex(bounty => bounty._id === deleteId);
     bounties.splice(deleteIndex, 1);
     res.send(`Bounty removed`);
+});
+
+app.put('/:bountyId', (req, res) => {
+    console.log("LOOKING AT: ", req.params.bountyId);
+    // const bountyId = req.params.bountyId;
+    // // const updateObj = req.body;
+    // const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId);
+    // const updatedBounty = Object.assign(bounties[bountyIndex], updateObj);
+    // res.send(updatedBounty);
 })
