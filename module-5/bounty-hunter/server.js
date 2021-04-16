@@ -18,7 +18,7 @@ const bounties = [
         fName: "Mike", 
         lName: "Moon", 
         living: true, 
-        imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", 
+        imgURL: "https://images.pexels.com/photos/7465116/pexels-photo-7465116.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", 
         bounty: 1000000, 
         type: "Jedi",  
         _id: uuid() },
@@ -26,7 +26,7 @@ const bounties = [
         fName: "Sally", 
         lName: "Jenkin", 
         living: false, 
-        imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        imgURL: "https://images.pexels.com/photos/7465116/pexels-photo-7465116.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=5000",
         bounty: 1, 
         type: "Sith",  
         _id: uuid() },
@@ -34,7 +34,7 @@ const bounties = [
         fName: "Mark", 
         lName: "Perui", 
         living: true, 
-        imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        imgURL: "https://images.pexels.com/photos/7465116/pexels-photo-7465116.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=5000",
         bounty: 1000000, 
         type: "Jedi" , 
         _id: uuid() },
@@ -42,7 +42,7 @@ const bounties = [
         fName: "Jenna", 
         lName: "Blackson", 
         living: false, 
-        imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        imgURL: "https://images.pexels.com/photos/7465116/pexels-photo-7465116.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=5000",
         bounty: 1234, 
         type: "Sith",  
         _id: uuid() },
@@ -50,7 +50,7 @@ const bounties = [
         fName: "James", 
         lName: "Capi", 
         living: true, 
-        imgURL: "https://images.pexels.com/photos/5721056/pexels-photo-5721056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        imgURL: "https://images.pexels.com/photos/7465116/pexels-photo-7465116.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=5000",
         bounty: 4563456, 
         type: "Jedi",  
         _id: uuid()}
@@ -61,7 +61,6 @@ app.get("/",(req,res)=>{
 });
 
 app.get("/bounties", (req, res) => {
-    // console.log("GETTING BOUNTIES")
     res.send(bounties);
 });
 
@@ -73,7 +72,6 @@ app.post("/bounties", (req, res) => {
 });
 
 app.delete('/:bountyId', (req, res) => {
-    console.log("LOOKING AT: ", req.params.bountyId);
     const deleteId = req.params.bountyId;
     const deleteIndex = bounties.findIndex(bounty => bounty._id === deleteId);
     bounties.splice(deleteIndex, 1);
@@ -81,10 +79,8 @@ app.delete('/:bountyId', (req, res) => {
 });
 
 app.put('/:bountyId', (req, res) => {
-    console.log("LOOKING AT: ", req.params.bountyId);
-    // const bountyId = req.params.bountyId;
-    // // const updateObj = req.body;
-    // const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId);
-    // const updatedBounty = Object.assign(bounties[bountyIndex], updateObj);
-    // res.send(updatedBounty);
+    const bountyId = req.params.bountyId;
+    const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId);
+    const updatedBounty = Object.assign(bounties[bountyIndex], req.body);
+    res.send(updatedBounty);
 })

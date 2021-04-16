@@ -5,20 +5,18 @@ import "./styles.css";
 
 
 function Form(props) {
+    const defaultObj = {
+        fName: props.fName || '',
+        lName: '',
+        living: true,
+        bounty: 0,
+        type: '',
+        imgURL: '',
+        _id: ''
+    }
     const [bounties, setBounties] = useState([]);
-    const [bountyAction, setBountyAction] = useState ("Add Bounty");
-    const [input, setInput] = useState(
-        {
-            fName: props.fName || '',
-            lName: '',
-            living: true,
-            bounty: 0,
-            type: '',
-            imgURL: '',
-            _id: ''
-        }
-
-    );
+    const [bountyAction, setBountyAction] = useState("Add Bounty");
+    const [input, setInput] = useState(defaultObj);
     const [showError, setError] = useState(false);
 
     useEffect(() => {
@@ -27,7 +25,7 @@ function Form(props) {
             .catch(err => console.log(err))
     }, [])
 
-    
+
     const handleChange = e => {
         const { name, value } = e.target;
         setInput(prevInputs => ({ ...prevInputs, [name]: value }));
@@ -36,21 +34,18 @@ function Form(props) {
     const handleSubmit = e => {
         e.preventDefault();
         if (bountyAction === "Add Bounty") addBounty(input);
-        else (patchBounty(input._id));
-        setInput('');
+        else (patchBounty(input));
         setBountyAction("Add Bounty");
     };
 
     const addBounty = (newBounty) => {
-        try {
-            console.log("ABOUT TO ADD A BOUNTY ", newBounty)
-            axios.post("/bounties", newBounty)
-                .then(res => { setBounties(prevBounties => [...prevBounties, res.data]) })
-        } catch (error) {
-            console.log(error)
-        }
+        axios.post("/bounties", newBounty)
+            .then(res => {
+                setBounties(prevBounties => [...prevBounties, res.data]);
+                setInput(defaultObj);
+            })
+            .catch(err => console.log(err))
     };
-
 
     const editBounty = (bountyId) => {
         setBountyAction("Edit Bounty");
@@ -58,15 +53,22 @@ function Form(props) {
         setInput(editB);
     }
 
-    const patchBounty = (bountyId) => {
-        console.log("ABOUT TO edit A BOUNTY ", input, " id= ", bountyId)
-        addBounty(input);
-        deleteBounty(bountyId);
+    const patchBounty = (updatedBounty) => {
+        axios.put(`/${updatedBounty._id}`, updatedBounty)
+            .then(res => {
+                setBounties(prevBounties => prevBounties.map(bounty => {
+                    return bounty._id !== updatedBounty._id ? bounty : res.data
+                }));
+                setInput(defaultObj);
+            })
+            .catch(err => console.log(err))
     }
     const deleteBounty = (bountyId) => {
-        console.log("Deleting: ", bountyId);
-        const removedArr = [...bounties].filter(bounty => bounty._id !== bountyId);
-        setBounties(removedArr);
+        axios.delete(`/${bountyId}`)
+            .then(res => {
+                setBounties(prevBounties => prevBounties.filter(bounty => bounty._id !== bountyId))
+            })
+            .catch(err => console.log(err))
     }
 
     return (

@@ -1,24 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import Bounty from "./Bounty"
+import React from 'react'
 import "./styles.css";
 
 
-const Bounties = ({bounties, deleteBounty, editBounty}) => {
-    // const [bounties, setBounties] = useState([]);
-    // // const [input, setInput] = useState('');
-    // // const [showError, setError] = useState(false);
-
-    // useEffect(() => {
-    //     axios.get("/bounties")
-    //         .then(res => setBounties(res.data))
-    //         .catch(err => console.log(err))
-    // }, [])
-
-    // const checkStocks = () => {
-    //     console.log("Checking Stocks: ", stocks);
-    // }     { fName: "Mike", lName: "Moon", living: true, bounty: 1000000, Type: "Jedi",  _id: uuid() },
-
+const Bounties = ({ bounties, deleteBounty, editBounty }) => {
     return (
         <div className="bounty-container">
             {bounties.map(bounty => {
