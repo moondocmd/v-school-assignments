@@ -11,8 +11,7 @@ function Form(props) {
         living: true,
         bounty: 0,
         type: '',
-        imgURL: '',
-        _id: ''
+        imgURL: ''
     }
     const [bounties, setBounties] = useState([]);
     const [bountyAction, setBountyAction] = useState("Add Bounty");
@@ -39,6 +38,7 @@ function Form(props) {
     };
 
     const addBounty = (newBounty) => {
+        console.log("new bounty: ", newBounty)
         axios.post("/bounties", newBounty)
             .then(res => {
                 setBounties(prevBounties => [...prevBounties, res.data]);
